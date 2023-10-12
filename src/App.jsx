@@ -1,12 +1,13 @@
 import Layout from './component/Layout';
-import Signup from './component/pages/Signup';
-import './styles/App.css'
+import Login from './component/pages/Login';
+import './styles/App.css';
 
 function App() {
     return (
         <Layout>
             {/* <Home /> */}
-            <Signup />
+            {/* <Signup /> */}
+            <Login />
         </Layout>
     );
 }

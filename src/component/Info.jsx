@@ -1,3 +1,7 @@
 export default function Info({ children }) {
-    return <div className="info">{children}</div>;
+    return (
+        <div className="info">
+            <p>{children}</p>
+        </div>
+    );
 }

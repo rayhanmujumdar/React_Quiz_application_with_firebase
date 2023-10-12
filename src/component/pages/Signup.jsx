@@ -1,3 +1,4 @@
+import singupImage from '../../assets/images/signup.svg';
 import Button from '../Button';
 import Checkbox from '../Checkbox';
 import Form from '../Form';
@@ -10,7 +11,7 @@ export default function Signup() {
         <>
             <h1>Create an account</h1>
             <div className="colum">
-                <Illustration />
+                <Illustration src={singupImage} alt="Signup image" />
                 <Form className="signup">
                     <TextInput type="text" placeholder="Enter name">
                         <ion-icon name="person-outline" />
@@ -27,9 +28,7 @@ export default function Signup() {
                     <Checkbox text="I agree to the Terms & Conditions" />
                     <Button type="submit">submit now</Button>
                     <Info>
-                        <p>
-                            Already have an account? <a href="login.html">Login</a> instead.
-                        </p>
+                        Already have an account? <a href="login.html">Login</a> instead.
                     </Info>
                 </Form>
             </div>
