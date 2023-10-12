@@ -1,0 +1,22 @@
+
+.account{
+    width: 50%;
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 3px;
+    align-items: center;
+    font-size: 12px;
+    margin-right: 30px;
+}
+
+.signupIcon{
+    font-size: 30px;
+}
+.logoutIcon{
+    font-size: 30px;
+}
+
+.account a{
+    font-size: 14px;
+}
