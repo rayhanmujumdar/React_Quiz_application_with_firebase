@@ -1,0 +1,27 @@
+.tooltip {
+    position: absolute;
+    top: -65px;
+    right: calc(75% - 80px);
+    z-index: 10;
+    width: 150px;
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    background-color: var(--fontPrimary);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+  
+  .tooltip::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: var(--fontPrimary);
+    position: absolute;
+    bottom: -9px;
+    right: 50%;
+    transform: rotate(45deg);
+    z-index: -1;
+  }

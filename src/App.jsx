@@ -1,5 +1,5 @@
 import Layout from './component/Layout';
-import Login from './component/pages/Login';
+import Quiz from './component/pages/Quiz';
 import './styles/App.css';
 
 function App() {
@@ -7,7 +7,8 @@ function App() {
         <Layout>
             {/* <Home /> */}
             {/* <Signup /> */}
-            <Login />
+            {/* <Login /> */}
+            <Quiz />
         </Layout>
     );
 }

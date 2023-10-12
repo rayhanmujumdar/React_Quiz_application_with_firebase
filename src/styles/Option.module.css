@@ -1,0 +1,18 @@
+.answer span {
+  width: 100%;
+}
+.answer span:nth-child(3) {
+  text-align: right;
+  font-size: 14px;
+  color: #4e536f;
+}
+
+.wrong {
+  background-color: var(--dangerRed) !important;
+  font-weight: 600 !important;
+}
+
+.correctAnswer {
+  background-color: var(--successGreen) !important;
+  font-weight: 600 !important;
+}
