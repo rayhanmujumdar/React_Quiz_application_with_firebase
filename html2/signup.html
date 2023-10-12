@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>signup - quiz application</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- nav section -->
+    <nav class="nav">
+      <ul>
+        <li>
+          <a href="/index.html" class="brand">
+            <img src="./images/logo-bg.png" alt="" />
+            <h3>Learn with sumit</h3>
+          </a>
+        </li>
+      </ul>
+      <div class="account">
+        <ion-icon name="person-circle-outline" class="signup-Icon"></ion-icon>
+        <a href="signup.html">Signup</a>
+      </div>
+    </nav>
+    <!-- signup section -->
+    <main class="main">
+      <div class="container">
+        <h1>Create an account</h1>
+        <div class="colum">
+          <div class="illustration">
+            <img src="./images/signup.svg" alt="signup logo" />
+          </div>
+          <form class="sign form">
+            <div class="textInput">
+              <input type="text" placeholder="Enter name" />
+              <div class="icon">
+                <ion-icon name="person-outline"></ion-icon>
+              </div>
+            </div>
+            <div class="textInput">
+              <input type="email" placeholder="Enter email" />
+              <div class="icon">
+                <ion-icon name="at-outline"></ion-icon>
+              </div>
+            </div>
+            <div class="textInput">
+              <input type="password" placeholder="Enter password" />
+              <div class="icon">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+              </div>
+            </div>
+            <div class="textInput">
+              <input type="password" placeholder="Confirm password" />
+              <div class="icon">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+              </div>
+            </div>
+            <div>
+              <label for="check">
+                <input type="checkbox" name="check" id="" />
+                I agree to the Terms & Conditions
+              </label>
+            </div>
+            <button class="button" type="submit">submit now</button>
+            <div class="info">
+              <p>
+                Already have an account? <a href="login.html">Login</a> instead.
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+  </body>
+</html>

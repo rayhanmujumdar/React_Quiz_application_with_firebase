@@ -1,0 +1,68 @@
+.summery{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.point{
+    width: 50%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.point .score{
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.badge {
+    height: 300px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.badge img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 800px){
+    .summery{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* analysis section css */
+.analysis{
+    margin: 2rem auto;
+}
+
+.question {
+    margin:  1rem 0;
+    padding: 0.5rem;
+}
+
+.qtitle{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+
+.qtitle .qicon{
+    font-size: 2rem;
+    color: var(--active);
+}
+
+.qtitle p{
+    font-size: 1.1rem;
+    font-weight: 500;
+}

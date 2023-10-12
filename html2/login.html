@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login - quiz application</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- nav section -->
+    <nav class="nav">
+      <ul>
+        <li>
+          <a href="/index.html" class="brand">
+            <img src="./images/logo-bg.png" alt="" />
+            <h3>Learn with sumit</h3>
+          </a>
+        </li>
+      </ul>
+      <div class="account">
+        <ion-icon name="person-circle-outline" class="signup-Icon"></ion-icon>
+        <a href="signup.html">Signup</a>
+      </div>
+    </nav>
+
+    <!-- login section -->
+    <main class="main">
+      <div class="container">
+        <h1>Login to your account</h1>
+        <div class="colum">
+          <div class="illustration">
+            <img src="./images/login.svg" alt="login illustration" />
+          </div>
+          <form class="login form" action="">
+            <div class="textInput">
+              <input type="email" placeholder="Enter email" />
+              <div class="icon">
+                <ion-icon name="at-outline"></ion-icon>
+              </div>
+            </div>
+            <div class="textInput">
+              <input type="password" placeholder="Enter password" />
+              <div class="icon">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+              </div>
+            </div>
+            <button type="submit" class="button">login</button>
+            <div class="info">
+                <p> Don't have an account? <a href="/signup.html">Signup</a> instead. </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+/* videos container component */
+.videos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 1.2rem;
+    margin: 3rem auto;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .videos{
+        width: 90%;
+    }
+}
+
+/* card section css */
+.card{
+    max-width: 400px;
+    height: fit-content;
+    padding: 10px;
+    border: 1px solid #e5e5e5;
+    padding-bottom: 1rem;
+    color: #000;
+}
+
+.card:hover{
+    box-shadow:  0 0 15px 0 #e5e5e5;;
+}
+
+.card .card-header img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.card .card-body p{
+    padding: 10px 0;
+    font-weight: 500;
+}
+
+.card .card-footer{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 6px;
+}
+
+@media screen and (max-width: 600px) {
+    .card{
+        width: 100%;
+    }
+}

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz - Quiz application</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css//quiz.css" />
+  </head>
+  <body>
+    <!-- nav section -->
+    <nav class="nav">
+      <ul>
+        <li>
+          <a href="/index.html" class="brand">
+            <img src="./images/logo-bg.png" alt="" />
+            <h3>Learn with sumit</h3>
+          </a>
+        </li>
+      </ul>
+      <div class="account">
+        <ion-icon name="person-circle-outline" class="signup-Icon"></ion-icon>
+        <a href="signup.html">Signup</a>
+      </div>
+    </nav>
+    <!-- Quiz section -->
+    <main class="main">
+      <div class="container">
+        <h1>Pick three of your favorite Star Wars Flims</h1>
+        <h4>Question can have multiple answers</h4>
+        <div class="answers">
+          <!-- options 1 -->
+          <label for="option1" class="answer">
+            <input type="checkbox" id="option1" />
+            A new hope 1
+          </label>
+          <!-- options 2 -->
+          <label for="option2" class="answer">
+            <input type="checkbox" id="option2" />
+            A new hope 2
+          </label>
+          <!-- options 3 -->
+          <label for="option3" class="answer">
+            <input type="checkbox" id="option3" />
+            A new hope 3
+          </label>
+          <!-- options 4 -->
+          <label for="option4" class="answer">
+            <input type="checkbox" id="option4" />
+            A new hope 4
+          </label>
+          <!-- options 5 -->
+          <label for="option5" class="answer">
+            <input type="checkbox" id="option5" />
+            A new hope 5
+          </label>
+
+          <!-- options 6 -->
+          <label for="option6" class="answer wrong">
+            <input type="checkbox" id="option6" />
+            A new hope 6
+          </label>
+
+          <!-- options 7 -->
+          <label for="option7" class="answer">
+            <input type="checkbox" id="option7" />
+            A new hope 7
+          </label>
+
+          <!-- options 8 -->
+          <label for="option8" class="answer">
+            <input type="checkbox" id="option8" />
+            A new hope 8
+          </label>
+          <!-- options 9 -->
+          <label for="option9" class="answer correct-answer">
+            <input type="checkbox" id="option9" />
+            A new hope 9
+          </label>
+          <!-- options 10 -->
+          <label for="option10" class="answer">
+            <input type="checkbox" id="option10" />
+            A new hope 10
+          </label>
+        </div>
+        <div class="progressBar">
+          <div class="backbutton">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+          </div>
+          <div class="rangeArea">
+            <div class="tooltip">
+              <span>25% complete</span>
+            </div>
+            <div class="range-body">
+              <div class="progress"></div>
+            </div>
+          </div>
+          <a href="result.html">
+            <button class="button next">
+              <span>Next Question</span>
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </button>
+          </a>
+        </div>
+        <div class="mini-player floatingBtn">
+          <ion-icon name="close-outline" class="close"></ion-icon>
+          <ion-icon name="play-circle-outline" class="open"></ion-icon>
+          <img src="./images/3.jpg" alt="thumbnail">
+          <p>#23 React Hooks Bangla - React useReducer hook Bangla</p>
+        </div>
+      </div>
+    </main>
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+    <script src="./script/script.js" lang="javascript"></script>
+  </body>
+</html>
