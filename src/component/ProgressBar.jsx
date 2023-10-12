@@ -1,17 +1,26 @@
+import { useState } from 'react';
 import Classes from '../styles/ProgressBar.module.css';
 import Button from './Button';
 import Tooltip from './Tooltip';
 
 export default function ProgressBar() {
+    const [tooltip, setTooltip] = useState(false);
     return (
         <div className={Classes.progressBar}>
             <div className={Classes.backbutton}>
                 <ion-icon name="arrow-back-outline" />
             </div>
             <div className={Classes.rangeArea}>
-                <Tooltip text="25% completed" />
                 <div className="range-body">
-                    <div className={Classes.progress} />
+                    <div
+                        onMouseOver={() => setTooltip(true)}
+                        onMouseOut={() => setTooltip(false)}
+                        onFocus={() => setTooltip(true)}
+                        onBlur={() => setTooltip(false)}
+                        className={Classes.progress}
+                    >
+                        {tooltip && <Tooltip text="25% completed" />}
+                    </div>
                 </div>
             </div>
             <a href="result.html">

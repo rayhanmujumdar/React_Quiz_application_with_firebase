@@ -1,7 +1,6 @@
 import AccountClasses from '../styles/Account.module.css';
 
 export default function Account() {
-    console.log(AccountClasses);
     return (
         <div className={AccountClasses.account}>
             <ion-icon name="person-circle-outline" class={AccountClasses.signupIcon} />

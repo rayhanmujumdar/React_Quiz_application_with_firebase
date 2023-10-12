@@ -1,10 +1,10 @@
-import singupImage from '../../assets/images/signup.svg';
-import Button from '../Button';
-import Checkbox from '../Checkbox';
-import Form from '../Form';
-import Illustration from '../Illustration';
-import Info from '../Info';
-import TextInput from '../TextInput';
+import singupImage from '../assets/images/signup.svg';
+import Button from '../component/Button';
+import Checkbox from '../component/Checkbox';
+import Form from '../component/Form';
+import Illustration from '../component/Illustration';
+import Info from '../component/Info';
+import TextInput from '../component/TextInput';
 
 export default function Signup() {
     return (

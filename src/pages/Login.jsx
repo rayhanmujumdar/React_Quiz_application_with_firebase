@@ -1,9 +1,9 @@
-import loginImage from '../../assets/images/login.svg';
-import Button from '../Button';
-import Form from '../Form';
-import Illustration from '../Illustration';
-import Info from '../Info';
-import TextInput from '../TextInput';
+import loginImage from '../assets/images/login.svg';
+import Button from '../component/Button';
+import Form from '../component/Form';
+import Illustration from '../component/Illustration';
+import Info from '../component/Info';
+import TextInput from '../component/TextInput';
 
 export default function Login() {
     return (
