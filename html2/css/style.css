@@ -129,10 +129,16 @@ h4 {
     .illustration{
         display: none;
     }
+    
+}
+@media screen and (max-width: 1000px){
     .colum{
         grid-template-columns: 1fr;
     }
+    
 }
+
+
 
 .form{
     display: grid;
