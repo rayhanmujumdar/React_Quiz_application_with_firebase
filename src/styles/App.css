@@ -61,3 +61,17 @@ h4 {
 .login {
   height: 330px;
 }
+/* analysis section global css */
+.analysis{
+  margin: 2rem auto;
+}
+
+.wrong {
+  background-color: var(--dangerRed) !important;
+  font-weight: 600 !important;
+}
+
+.correctAnswer {
+  background-color: var(--successGreen) !important;
+  font-weight: 600 !important;
+}

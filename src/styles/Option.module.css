@@ -7,12 +7,4 @@
   color: #4e536f;
 }
 
-.wrong {
-  background-color: var(--dangerRed) !important;
-  font-weight: 600 !important;
-}
 
-.correctAnswer {
-  background-color: var(--successGreen) !important;
-  font-weight: 600 !important;
-}
