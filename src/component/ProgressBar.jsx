@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Classes from '../styles/ProgressBar.module.css';
 import Button from './Button';
 import Tooltip from './Tooltip';
@@ -23,12 +24,12 @@ export default function ProgressBar() {
                     </div>
                 </div>
             </div>
-            <a href="result.html">
+            <Link to="/result">
                 <Button className={Classes.next}>
                     <span>Next Question</span>
                     <ion-icon name="arrow-forward-outline" />
                 </Button>
-            </a>
+            </Link>
         </div>
     );
 }
