@@ -1,5 +1,6 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { getAuth } from 'firebase/auth';
+import { useEffect, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import singupImage from '../assets/images/signup.svg';
 import Button from '../component/Button';
 import Checkbox from '../component/Checkbox';
@@ -11,12 +12,25 @@ import Error from '../component/UI/Error';
 import { useAuth } from '../contexts/authContext';
 
 export default function Signup() {
-    const { signup, currentUser } = useAuth();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const { currentUser } = getAuth();
+    const { signup } = useAuth();
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
+    const path = location?.state?.pathname || '/';
+
+    // redirect
+    useEffect(() => {
+        if (currentUser?.uid) {
+            navigate(path, { replace: true });
+        }
+    }, [currentUser, navigate, path]);
+
+    // signup handle function
     const handleSignupForm = (e) => {
         e.preventDefault();
         if (password !== confirmPassword) {
@@ -30,7 +44,6 @@ export default function Signup() {
             });
         }
     };
-    console.log(currentUser);
     return (
         <>
             <h1>Create an account</h1>

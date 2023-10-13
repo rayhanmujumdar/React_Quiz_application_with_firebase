@@ -1,4 +1,17 @@
-
+.logoutBtn{
+    border: none;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.logoutBtn span{
+    font-size: 14px;
+    font-weight: 500;
+}
 .account{
     width: 50%;
     height: 60px;
