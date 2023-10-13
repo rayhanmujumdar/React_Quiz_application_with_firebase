@@ -1,12 +1,15 @@
 import { Outlet } from 'react-router-dom';
 import Layout from './component/Layout';
+import AuthProvider from './contexts/authContext';
 import './styles/App.css';
 
 function App() {
     return (
-        <Layout>
-            <Outlet />
-        </Layout>
+        <AuthProvider>
+            <Layout>
+                <Outlet />
+            </Layout>
+        </AuthProvider>
     );
 }
 

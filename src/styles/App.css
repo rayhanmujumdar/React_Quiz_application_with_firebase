@@ -39,8 +39,8 @@ h4 {
 }
 
 .info {
-    text-align: center;
-    margin-top : 2rem;
+  text-align: center;
+  margin-top: 2rem;
 }
 
 .colum {
@@ -62,7 +62,7 @@ h4 {
   height: 330px;
 }
 /* analysis section global css */
-.analysis{
+.analysis {
   margin: 2rem auto;
 }
 
@@ -74,4 +74,11 @@ h4 {
 .correctAnswer {
   background-color: var(--successGreen) !important;
   font-weight: 600 !important;
+}
+
+/* error */
+.error {
+  padding: 6px 0;
+  margin: 6px;
+  color: red;
 }
