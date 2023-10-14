@@ -4,19 +4,23 @@ import AccountClasses from '../styles/Account.module.css';
 
 export default function Account() {
     const { logout, currentUser } = useAuth();
+    const { uid, displayName } = currentUser;
     let content = null;
-    if (currentUser?.uid) {
+    if (uid) {
         content = (
-            <button
-                type="button"
-                className={AccountClasses.logoutBtn}
-                onClick={async () => {
-                    await logout();
-                }}
-            >
-                <ion-icon name="log-out-outline" class={AccountClasses.logoutIcon} />
-                <span>Logout</span>
-            </button>
+            <>
+                <span style={{ fontSize: '14px' }}>{displayName}</span>
+                <button
+                    type="button"
+                    className={AccountClasses.logoutBtn}
+                    onClick={async () => {
+                        await logout();
+                    }}
+                >
+                    <ion-icon name="log-out-outline" class={AccountClasses.logoutIcon} />
+                    <span>Logout</span>
+                </button>
+            </>
         );
     } else {
         content = (
