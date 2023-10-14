@@ -9,7 +9,9 @@ export default function Account() {
     if (uid) {
         content = (
             <>
-                <span style={{ fontSize: '14px' }}>{displayName}</span>
+                <span style={{ fontSize: '14px', padding: '0 5px', margin: '0 5px' }}>
+                    {displayName}
+                </span>
                 <button
                     type="button"
                     className={AccountClasses.logoutBtn}
