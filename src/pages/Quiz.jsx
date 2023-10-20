@@ -36,10 +36,7 @@ export default function Quiz() {
     const { id } = useParams();
     const { loading, error, questions } = useQuestions(id);
     const [currentQna, setCurrentQna] = useState(0);
-    // const [qna, setQna] = useState([]);
     const [qna, dispatch] = useReducer(reducer, initialValue);
-    // const [next, setNext] = useState(0);
-    // const [prev, setPrev] = useState(0);
     // for copy all qna to questions and set check option all questions
     useEffect(() => {
         dispatch({
