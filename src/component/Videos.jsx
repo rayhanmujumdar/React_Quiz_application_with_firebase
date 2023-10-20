@@ -7,7 +7,7 @@ import Video from './Video';
 
 export default function Videos() {
     const [page, setPage] = useState(1);
-    const limit = 12;
+    const limit = 15;
     const { loading, error, videos, hasMore } = useVideoList(page, limit);
     let content = null;
     if (loading && !error) {
@@ -22,11 +22,12 @@ export default function Videos() {
                 dataLength={videos.length}
                 next={() => setPage((prevPage) => prevPage + limit)}
                 hasMore={hasMore}
+                loader="Loading ...."
             >
                 {videos.map((video) => {
                     if (video?.noq !== 0) {
                         return (
-                            <Link to="/quiz">
+                            <Link state={{ title: video.title }} to={`/quiz/${video.youtubeID}`}>
                                 <Video key={video.youtubeID} video={video} />
                             </Link>
                         );

@@ -12,7 +12,7 @@
     box-sizing: border-box;
   }
   
-  .miniPlayer img {
+  .miniPlayer iframe {
     width: 300px;
     animation: miniPlayerAnim 0.3s ease forwards;
   }
@@ -57,7 +57,7 @@
     user-select: none;
   }
   
-  .floatingBtn img {
+  .floatingBtn iframe {
     transform: scale(0);
     display: none;
   }

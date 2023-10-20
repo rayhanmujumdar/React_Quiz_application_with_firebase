@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import miniPlayerImage from '../assets/images/3.jpg';
+import { useLocation } from 'react-router-dom';
 import Classes from '../styles/MiniPlayer.module.css';
 
-export default function MiniPlayer() {
+export default function MiniPlayer({ videoId }) {
     const [player, setPlayer] = useState(false);
+    const { state } = useLocation();
     return (
         <div className={`${Classes.miniPlayer} ${!player && Classes.floatingBtn}`}>
             <ion-icon onClick={() => setPlayer(false)} name="close-outline" class={Classes.close} />
@@ -12,8 +13,17 @@ export default function MiniPlayer() {
                 name="play-circle-outline"
                 class={Classes.open}
             />
-            <img src={miniPlayerImage} alt="thumbnail" />
-            <p>#23 React Hooks Bangla - React useReducer hook Bangla</p>
+            {player && (
+                <iframe
+                    width="200"
+                    src={`https://www.youtube-nocookie.com/embed/${videoId}`}
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                />
+            )}
+            <p>{state?.title}</p>
         </div>
     );
 }

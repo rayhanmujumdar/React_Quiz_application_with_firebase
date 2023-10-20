@@ -1,9 +1,9 @@
 .tooltip {
+  width: 170px;
   position: absolute;
   top: -65px;
-  right: -85px;
+  right: -90px;
   z-index: 10;
-  width: 160px;
   padding: 0.8rem 1rem;
   border-radius: 10px;
   background-color: var(--fontPrimary);

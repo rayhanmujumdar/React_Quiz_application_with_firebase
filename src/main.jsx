@@ -28,18 +28,18 @@ const router = createBrowserRouter([
             },
             {
                 path: '/',
-                element: <PrivateRoute/>,
+                element: <PrivateRoute />,
                 children: [
                     {
-                        path: '/quiz',
+                        path: '/quiz/:id',
                         element: <Quiz />,
                     },
                     {
-                        path: '/result',
+                        path: '/result/:id',
                         element: <Result />,
-                    }
-                ]
-            }
+                    },
+                ],
+            },
         ],
     },
 ]);

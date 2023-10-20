@@ -56,7 +56,6 @@
   }
 
   .progress {
-    width: 25%;
     height: 4px;
     background-color: var(--fontPrimary);
     position: relative;

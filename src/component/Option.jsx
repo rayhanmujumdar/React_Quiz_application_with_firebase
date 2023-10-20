@@ -1,9 +1,9 @@
 import Classes from '../styles/Option.module.css';
 
-export default function Option({ text, htmlFor, ...props }) {
+export default function Option({ text, id, ...props }) {
     return (
-        <label htmlFor={htmlFor} className={Classes.answer}>
-            <input type="checkbox" id={htmlFor} {...props} />
+        <label htmlFor={id} className={Classes.answer}>
+            <input {...props} type="checkbox" id={id} />
             <span>{text}</span>
         </label>
     );
