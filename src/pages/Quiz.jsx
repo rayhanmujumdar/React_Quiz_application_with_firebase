@@ -1,4 +1,4 @@
-import { child, getDatabase, push, ref } from 'firebase/database';
+import { child, getDatabase, ref, set } from 'firebase/database';
 import _ from 'lodash';
 import { useEffect, useReducer, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -78,13 +78,15 @@ export default function Quiz() {
             if (currentUser?.uid) {
                 console.log(currentUser.uid);
                 const db = getDatabase();
-                const resultRef = ref(db);
-                const childQna = child(resultRef, `/result/${currentUser.uid}`);
+                const resultRef = ref(db, `/result/${currentUser.uid}`);
+                const childQna = child(resultRef, `${id}`);
                 try {
-                    await push(childQna, {
-                        [id]: qna,
+                    await set(childQna, {
+                        ...qna,
                     });
-                    navigate(`/result/${currentUser?.uid}`);
+                    navigate(`/result/${id}`, {
+                        state: qna,
+                    });
                 } catch (err) {
                     console.log(err);
                 }
@@ -107,7 +109,7 @@ export default function Quiz() {
                 <h1>{questions[currentQna]?.title}</h1>
                 <h4>Question can have multiple answers</h4>
                 {qna[currentQna]?.options.length > 0 && (
-                    <Answer options={qna[currentQna]?.options} handleChecked={handleChange} />
+                    <Answer input options={qna[currentQna]?.options} handleChecked={handleChange} />
                 )}
                 <ProgressBar
                     progress={parentage}

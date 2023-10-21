@@ -19,6 +19,7 @@ export default function Videos() {
     } else {
         content = (
             <InfiniteScroll
+                key={Math.random()}
                 dataLength={videos.length}
                 next={() => setPage((prevPage) => prevPage + limit)}
                 hasMore={hasMore}
@@ -27,8 +28,12 @@ export default function Videos() {
                 {videos.map((video) => {
                     if (video?.noq !== 0) {
                         return (
-                            <Link state={{ title: video.title }} to={`/quiz/${video.youtubeID}`}>
-                                <Video key={video.youtubeID} video={video} />
+                            <Link
+                                key={video.youtubeID}
+                                state={{ title: video.title }}
+                                to={`/quiz/${video.youtubeID}`}
+                            >
+                                <Video video={video} />
                             </Link>
                         );
                     }

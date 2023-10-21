@@ -15,8 +15,9 @@ export default function MiniPlayer({ videoId }) {
             />
             {player && (
                 <iframe
-                    width="200"
-                    src={`https://www.youtube-nocookie.com/embed/${videoId}`}
+                    width="200px"
+                    height="168px"
+                    src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`}
                     title="YouTube video player"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
